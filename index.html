@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Go Hiking! ⛰️</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F0FFF0; /* Honeydew */
+            --container-bg: #FFFFFF;
+            --primary-text: #2F4F4F; /* Dark Slate Gray */
+            --header-text: #2E8B57; /* Sea Green */
+            --accent-color: #FFB6C1; /* Light Pink */
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --font-family: 'Quicksand', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--primary-text);
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px var(--shadow-color);
+            padding: 30px 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            border: 2px dashed var(--header-text);
+        }
+
+        header {
+            margin-bottom: 25px;
+        }
+
+        .icon-header {
+            font-size: 50px;
+            color: var(--header-text);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            color: var(--header-text);
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .details, .location, .crew {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--header-text);
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .details-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .detail-item {
+            background-color: #F8F8FF; /* Ghost White */
+            padding: 15px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        .detail-item i {
+            font-size: 1.5em;
+            color: var(--header-text);
+            margin-right: 10px;
+        }
+        
+        .detail-item span {
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 15px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .crew-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .crew-member {
+            background-color: var(--header-text);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 1.1em;
+            box-shadow: 0 4px 6px rgba(46, 139, 87, 0.3);
+            transition: transform 0.2s;
+        }
+        
+        .crew-member:hover {
+            transform: translateY(-3px);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--header-text);
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="icon-header">⛰️</div>
+            <h1>Let's Go Hiking!</h1>
+            <p>A fun adventure awaits us on the beautiful trails of Bogd Mountain. Get ready for amazing views and great company!</p>
+        </header>
+
+        <section class="details">
+            <h2><i class="fas fa-info-circle"></i> The Plan</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>September 20, 2025</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Assemble at 9:00 AM</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="location">
+            <h2><i class="fas fa-map-marker-alt"></i> Where We'll Meet</h2>
+            <p>We'll meet up at the iconic Sükhbaatar Square! From there, we can arrange our travel to the mountain trail together.</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1336.9587208630412!2d106.91514445041597!3d47.918634874253506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96930069209819%3A0xf44fb2dad8fa20b2!2z44K544OV44OQ44O844OI44Or5bqD5aC0!5e0!3m2!1sja!2smn!4v1758245533431!5m2!1sja!2smn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="crew">
+            <h2><i class="fas fa-users"></i> Our Hiking Crew</h2>
+            <ul class="crew-list">
+                <li class="crew-member">Itgel</li>
+                <li class="crew-member">Yanjka</li>
+                <li class="crew-member">Danzan</li>
+                <li class="crew-member">Nomio</li>
+                <li class="crew-member">Miigaa</li>
+                <li class="crew-member">Puka (Nomi)</li>
+                <li class="crew-member">Temu (Nana)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Can't wait to see you all! ☀️🎒</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
